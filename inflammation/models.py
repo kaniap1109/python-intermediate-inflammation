@@ -47,3 +47,16 @@ def daily_min(data):
        """
     return np.min(data, axis=0)
 
+
+
+def daily_above_threshold(data, id, threshold)
+    """
+    :param data: A 2D data array with inflammation data \
+    each row contains measurement for a single patient
+    :param threshold: A threshold to compare against
+    :param id: A patient row number
+    :return bool: A boolean saying whether or not the daily inflammation exceeded \
+    given threshold 
+    """
+    result=map(lambda x: x>threshold, data[id])
+    return result
