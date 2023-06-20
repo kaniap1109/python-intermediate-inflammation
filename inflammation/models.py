@@ -59,6 +59,7 @@ def daily_min(data):
        """
     return np.min(data, axis=0)
 
+<<<<<<< HEAD
 def attach_names(data, names)
     """
     
@@ -72,3 +73,18 @@ def attach_names(data, names)
                      'datarow':i})
     return dict
 
+=======
+
+
+def daily_above_threshold(data, id, threshold)
+    """
+    :param data: A 2D data array with inflammation data \
+    each row contains measurement for a single patient
+    :param threshold: A threshold to compare against
+    :param id: A patient row number
+    :return bool: A boolean saying whether or not the daily inflammation exceeded \
+    given threshold 
+    """
+    result=map(lambda x: x>threshold, data[id])
+    return result
+>>>>>>> 39d81aeecad9ec7e1f3bd7e9dfb2a3677c4cc06e
