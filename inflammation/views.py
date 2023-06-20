@@ -23,3 +23,17 @@ def visualize(data_dict):
     fig.tight_layout()
 
     plt.show()
+
+def text_represent(data_dict):
+    """Display data of basic statistical properties of the inflammation data in a textual format
+
+    :param data_dict: Dictionary of name -> data to represent textually 
+    :return: data in a textual format
+    """
+    num_lines=len(data_dict)
+    list_text=[]
+    for name, data in data_dict.items():
+        list_text.append(name +':' data)
+
+    return list_text
+
